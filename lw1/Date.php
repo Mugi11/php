@@ -27,7 +27,7 @@ class Date
         $firstTime = date_create($this->format());
         $secondTime = date_create($secondDate->format());
         $difference = $firstTime->diff($secondTime);
-        return $difference->format('%a');   // %а this is a translation to the days format
+        return $difference->format('%a');   // %а this is in order to transform into a daily format
     }
 
     function minusDay(int $createDay): string
@@ -47,3 +47,11 @@ class Date
         }
     }
 }
+$date = new Date(1, 2, 2001);
+$date2 = new Date(1, 4, 2001);
+
+print("{$date->diffDay($date2)} \n");// 59
+print("{$date->minusDay(4)} \n");//  ’28.01.2001’
+print("{$date->getDateOfWeek()} \n");// ‘Thursday’
+print("{$date->format('ru')} \n");// ’01.02.2001’
+print("{$date->format('en')} \n");// ‘2001-02-01’
