@@ -50,8 +50,8 @@ class Date
 $date = new Date(1, 2, 2001);
 $date2 = new Date(1, 4, 2001);
 
-print("{$date->diffDay($date2)} \n");// 59
-print("{$date->minusDay(4)} \n");//  ’28.01.2001’
-print("{$date->getDateOfWeek()} \n");// ‘Thursday’
-print("{$date->format('ru')} \n");// ’01.02.2001’
+print("{$date->diffDay($date2)} \n"); // 59
+print("{$date->minusDay(4)} \n"); //  ’28.01.2001’
+print("{$date->getDateOfWeek()} \n"); // ‘Thursday’
+print("{$date->format('ru')} \n"); // ’01.02.2001’
 print("{$date->format('en')} \n");// ‘2001-02-01’

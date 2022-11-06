@@ -37,7 +37,6 @@ class Calculator
         $this->answer = 0;
         return $tempAnswer;
     }
-
 }
 
 $calculator = new Calculator();
