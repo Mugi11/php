@@ -55,4 +55,10 @@ class DateTest extends TestCase
         $this->expectExceptionMessage("Incorrect Day or Month or Year");
         $incorrectDate = new Date(4, -845, 2002);   
     }
+
+    public function testIsInvalidInputYeaR(): void
+    {
+        $this->expectExceptionMessage("Incorrect Day or Month or Year");
+        $incorrectDate = new Date(4, 5, -2002);   
+    }
 }
