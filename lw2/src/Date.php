@@ -9,7 +9,7 @@ class Date
     function __construct(int $createDay, int $createMonth, int $createYear)
     {
         $tempVariable = strval($createDay) . '.' . strval($createMonth) . '.' . strval($createYear);
-        $this->CheckCorrectValues($createDay, $createMonth, $createYear);
+        $this->сheckCorrectValues($createDay, $createMonth, $createYear);
         if (!date_create($tempVariable)) {
             throw new Exception("Incorrect Day or Month or Year");
         }
@@ -48,7 +48,7 @@ class Date
         }
     }
 
-    function CheckCorrectValues(int $createDay, int $createMonth, int $createYear): void
+    function сheckCorrectValues(int $createDay, int $createMonth, int $createYear): void
     {
         if($createDay <= 0 || $createMonth <=0 || $createYear <= 0){
             throw new Exception("Incorrect Day or Month or Year");
